@@ -6,7 +6,9 @@ public:
 	Board();
 	~Board();
 	bool LoadBoard(std::string);
-	bool SaveBoard();
+	bool SaveBoard(std::string);
+private:
+	 void Setup();
 private:
 	char board[28][36];
 

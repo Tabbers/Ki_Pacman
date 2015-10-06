@@ -142,13 +142,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="bashful.h" />
     <ClInclude Include="board.h" />
-    <ClInclude Include="ghost.h" />
+    <ClInclude Include="pacman.h" />
+    <ClInclude Include="pokey.h" />
+    <ClInclude Include="shadow.h" />
+    <ClInclude Include="speedy.h" />
+    <ClInclude Include="statemachine.h" />
+    <ClInclude Include="vector2.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="bashful.cpp" />
     <ClCompile Include="board.cpp" />
-    <ClCompile Include="ghost.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="pacman.cpp" />
+    <ClCompile Include="pokey.cpp" />
+    <ClCompile Include="shadow.cpp" />
+    <ClCompile Include="speedy.cpp" />
+    <ClCompile Include="statemachine.cpp" />
+    <ClCompile Include="vector2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
