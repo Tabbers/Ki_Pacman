@@ -16,7 +16,11 @@ int main(int argc, char *argv[])
 
 	board.LoadBoard("map.txt");
 
-
+	pac.determinePosition(&board, 'i', 'j', 'I', 'J');
+	shadow.determinePosition(&board, 'k', 'l', 'K', 'L');
+	speedy.determinePosition(&board, 'm', 'n', 'M', 'N');
+	bash.determinePosition(&board, 'o', 'p', 'O', 'P');
+	pokey.determinePosition(&board, 'q', 'r', 'Q', 'R');
 
 
 	getchar();

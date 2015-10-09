@@ -1,17 +1,16 @@
 #pragma once
-class  Vector2;
+#include "vector2.h"
+class  Board;
 
 class StateMachine
 {
 public:
 	virtual ~StateMachine();
-	virtual Vector2 calculateNewPosition(Vector2);
-
+	virtual Vector2 calculateNewPosition(Vector2) = 0;
+	virtual void determinePosition(Board*,char, char, char, char);
 protected:
 	char State;
-	int x, y;
-	int headingX, headingY;
-
-
+	Vector2 position;
+	Vector2 heading;
 };
 

@@ -13,30 +13,42 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Statemachine">
+      <UniqueIdentifier>{c20d8e30-bc91-4594-b7ef-8d6e889b8127}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Statemachine\Children">
+      <UniqueIdentifier>{e1e1fa3b-ef97-4a25-968a-53ec520a17b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Statemachine">
+      <UniqueIdentifier>{a55bcabf-67ab-4d52-b80d-b5bc6c957261}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Statemachine\Children">
+      <UniqueIdentifier>{1637ab46-4002-4896-997e-38c45e7d424b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="board.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="statemachine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="vector2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="pacman.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="speedy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="shadow.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Statemachine</Filter>
     </ClInclude>
     <ClInclude Include="bashful.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Statemachine\Children</Filter>
+    </ClInclude>
+    <ClInclude Include="pacman.h">
+      <Filter>Header Files\Statemachine\Children</Filter>
     </ClInclude>
     <ClInclude Include="pokey.h">
+      <Filter>Header Files\Statemachine\Children</Filter>
+    </ClInclude>
+    <ClInclude Include="shadow.h">
+      <Filter>Header Files\Statemachine\Children</Filter>
+    </ClInclude>
+    <ClInclude Include="speedy.h">
+      <Filter>Header Files\Statemachine\Children</Filter>
+    </ClInclude>
+    <ClInclude Include="vector2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -47,26 +59,26 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="statemachine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="vector2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pacman.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="bashful.cpp">
+      <Filter>Source Files\Statemachine\Children</Filter>
     </ClCompile>
-    <ClCompile Include="speedy.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="pacman.cpp">
+      <Filter>Source Files\Statemachine\Children</Filter>
     </ClCompile>
     <ClCompile Include="shadow.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="bashful.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Statemachine\Children</Filter>
     </ClCompile>
     <ClCompile Include="pokey.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Statemachine\Children</Filter>
+    </ClCompile>
+    <ClCompile Include="speedy.cpp">
+      <Filter>Source Files\Statemachine\Children</Filter>
+    </ClCompile>
+    <ClCompile Include="statemachine.cpp">
+      <Filter>Source Files\Statemachine</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
