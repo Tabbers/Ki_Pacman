@@ -11,7 +11,7 @@ Pacman::~Pacman()
 {
 }
 
-Vector2 Pacman::calculateNewPosition(Vector2)
+void Pacman::calculateNewDestination(Vector2 pac, char state)
 {
-	return Vector2();
+ 
 }

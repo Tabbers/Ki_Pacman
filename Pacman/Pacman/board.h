@@ -1,5 +1,7 @@
 #pragma once
 #include <string>
+#include <SDL.h>
+
 class Board
 {
 public:
@@ -7,10 +9,19 @@ public:
 	~Board();
 	bool LoadBoard(std::string);
 	bool SaveBoard(std::string);
+	void loop(int);
+	void SetupSprite();
+	void CleanupSprite();
 private:
-	 void Setup();
+	void DisplayConsole();
+	void DisplaySprite();
+	void Setup();
 public:
-	char board[28][36];
-	const int BOARD_WIDTH = 28;
-	const int BOARD_HEIGHT = 36;	
+	static const int BOARD_WIDTH = 29;
+	static const int BOARD_HEIGHT = 32;
+	char board[BOARD_WIDTH][BOARD_HEIGHT];
+	char State;
+private:
+	SDL_Window* window;
+	
 };

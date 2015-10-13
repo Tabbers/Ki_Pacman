@@ -5,7 +5,11 @@ StateMachine::~StateMachine()
 {
 }
 
-Vector2 StateMachine::calculateNewPosition(Vector2)
+void StateMachine::calculateNewDestination(Vector2,char)
+{
+}
+
+Vector2 StateMachine::calculateNextPosition()
 {
 	return Vector2();
 }

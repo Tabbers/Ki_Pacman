@@ -11,7 +11,7 @@ Bashful::~Bashful()
 {
 }
 
-Vector2 Bashful::calculateNewPosition(Vector2)
+void Bashful::calculateNewDestination(Vector2 pac, char state)
 {
-	return Vector2();
+
 }

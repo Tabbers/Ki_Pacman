@@ -1,28 +1,19 @@
 #include "board.h"
-#include "pacman.h"
-#include "shadow.h"
-#include "speedy.h"
-#include "bashful.h"
-#include "pokey.h"
+#include <iostream>
 
 int main(int argc, char *argv[])
 {
+	int steps = 1;
+
 	Board board;
-	Pacman pac;
-	Shadow shadow;
-	Speedy speedy;
-	Bashful bash;
-	Pokey pokey;
-
+	
 	board.LoadBoard("map.txt");
-
-	pac.determinePosition(&board, 'i', 'j', 'I', 'J');
-	shadow.determinePosition(&board, 'k', 'l', 'K', 'L');
-	speedy.determinePosition(&board, 'm', 'n', 'M', 'N');
-	bash.determinePosition(&board, 'o', 'p', 'O', 'P');
-	pokey.determinePosition(&board, 'q', 'r', 'Q', 'R');
-
-
+	board.SetupSprite();
+	board.loop(steps);
+	std::cout << "calculated "+std::to_string(steps)+" steps";
 	getchar();
+	board.SaveBoard("result.txt");
+	board.CleanupSprite();
+	return 0;
 }
 

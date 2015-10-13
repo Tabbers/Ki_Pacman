@@ -6,6 +6,6 @@ class Pacman : public StateMachine
 public:
 	Pacman();
 	~Pacman();
-	virtual Vector2 calculateNewPosition(Vector2);
+	virtual void calculateNewDestination(Vector2,char);
 };
 

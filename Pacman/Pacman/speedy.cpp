@@ -11,7 +11,6 @@ Speedy::~Speedy()
 {
 }
 
-Vector2 Speedy::calculateNewPosition(Vector2)
+void Speedy::calculateNewDestination(Vector2 pac, char state)
 {
-	return Vector2();
 }

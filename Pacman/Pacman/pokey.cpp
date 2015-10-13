@@ -11,7 +11,7 @@ Pokey::~Pokey()
 {
 }
 
-Vector2 Pokey::calculateNewPosition(Vector2)
+void Pokey::calculateNewDestination(Vector2 pac, char state)
 {
-	return Vector2();
+
 }

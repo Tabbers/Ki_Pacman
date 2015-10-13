@@ -6,7 +6,8 @@ class StateMachine
 {
 public:
 	virtual ~StateMachine();
-	virtual Vector2 calculateNewPosition(Vector2) = 0;
+	virtual void calculateNewDestination(Vector2,char) = 0;
+	virtual Vector2 calculateNextPosition();
 	virtual void determinePosition(Board*,char, char, char, char);
 protected:
 	char State;

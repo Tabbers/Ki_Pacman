@@ -6,6 +6,6 @@ class Bashful : public StateMachine
 public:
 	Bashful();
 	~Bashful();
-	virtual Vector2 calculateNewPosition(Vector2);
+	virtual void calculateNewDestination(Vector2,char);
 };
 

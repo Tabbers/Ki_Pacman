@@ -11,3 +11,18 @@ Vector2::Vector2()
 Vector2::~Vector2()
 {
 }
+
+Vector2 Vector2::operator+(const Vector2 &rhs)
+{
+	Vector2 temp;
+	temp.x = x + rhs.x;
+	temp.y = y + rhs.y;
+	return temp;
+}
+Vector2 Vector2::operator-(const Vector2 &rhs)
+{
+	Vector2 temp;
+	temp.x = x - rhs.x;
+	temp.y = y - rhs.y;
+	return temp;
+}
