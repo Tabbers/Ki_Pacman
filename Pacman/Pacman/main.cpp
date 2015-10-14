@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 		while (window.pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed) window.close();
-			if (calculateSteps && step < steps) window.close();
+			//if (calculateSteps && step < steps) window.close();
 			step++;
 		}
 		window.clear(sf::Color::Black);

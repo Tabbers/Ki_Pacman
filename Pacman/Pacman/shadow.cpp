@@ -4,7 +4,7 @@
 
 Shadow::Shadow()
 {
-	home.x = 27;
+	home.x = 29;
 	home.y = 1;
 }
 
@@ -13,13 +13,13 @@ Shadow::~Shadow()
 {
 }
 
-void Shadow::calculateNewDestination(Vector2 pac, char state)
+void Shadow::calculateNewDestination(Vector2 pacpos, Vector2 pacheading, char state)
 {
 	//p = patrol, r = pursuit, e = escape
 
 	if (state == 'r')
 	{
-		heading = pac - position;
+		heading = pacpos - position;
 	}
 	else if (state == 'p')
 	{
@@ -27,6 +27,6 @@ void Shadow::calculateNewDestination(Vector2 pac, char state)
 	}
 	else if (state = 'e')
 	{
-
+		heading = heading.invert();
 	}
 }

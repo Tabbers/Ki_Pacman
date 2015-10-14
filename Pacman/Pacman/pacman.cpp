@@ -11,7 +11,7 @@ Pacman::~Pacman()
 {
 }
 
-void Pacman::calculateNewDestination(Vector2 pac, char state)
+void Pacman::calculateNewDestination(Vector2 pacpos, Vector2 pacheading, char state)
 {
  
 }

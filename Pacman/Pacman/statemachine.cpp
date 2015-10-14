@@ -5,13 +5,26 @@ StateMachine::~StateMachine()
 {
 }
 
-void StateMachine::calculateNewDestination(Vector2,char)
+void StateMachine::calculateNewDestination(Vector2,Vector2,char)
 {
 }
 
 Vector2 StateMachine::calculateNextPosition()
 {
-	return Vector2();
+	Vector2 temp;
+	temp = position;
+	prevposition = position;
+	if(heading.x > heading.y)
+	{
+		temp.x - 1;
+		position = temp;
+	}
+	else
+	{
+		temp.y - 1;
+		position = temp;
+	}
+	return position;
 }
 
 void StateMachine::determinePosition(Board*board ,char c1, char c2, char c3, char c4)
