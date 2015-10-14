@@ -1,6 +1,11 @@
 #pragma once
 #include <string>
-#include <SDL.h>
+#include <SFML\Graphics.hpp>
+#include "pacman.h"
+#include "shadow.h"
+#include "speedy.h"
+#include "bashful.h"
+#include "pokey.h"
 
 class Board
 {
@@ -9,19 +14,24 @@ public:
 	~Board();
 	bool LoadBoard(std::string);
 	bool SaveBoard(std::string);
-	void loop(int);
+	void loop(sf::RenderWindow*);
 	void SetupSprite();
 	void CleanupSprite();
 private:
 	void DisplayConsole();
-	void DisplaySprite();
+	void DisplaySprite(sf::RenderWindow*);
 	void Setup();
+	bool LoadSprites();
 public:
 	static const int BOARD_WIDTH = 29;
 	static const int BOARD_HEIGHT = 32;
 	char board[BOARD_WIDTH][BOARD_HEIGHT];
 	char State;
 private:
-	SDL_Window* window;
-	
+	sf::Sprite sprites[33];
+	Pacman pac;
+	Shadow shadow;
+	Speedy speedy;
+	Bashful bash;
+	Pokey pokey;
 };
