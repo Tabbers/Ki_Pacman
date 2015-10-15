@@ -6,6 +6,10 @@ Speedy::Speedy()
 {
 	home.x = 0;
 	home.y = 0;
+	representation[0] = 'm';
+	representation[1] = 'n';
+	representation[2] = 'M';
+	representation[3] = 'N';
 }
 
 

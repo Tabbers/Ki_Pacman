@@ -18,12 +18,13 @@ int main(int argc, char *argv[])
 		while (window.pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed) window.close();
-			//if (calculateSteps && step < steps) window.close();
-			step++;
+			
 		}
+		if (calculateSteps && step < steps) window.close();
 		window.clear(sf::Color::Black);
 		board.loop(&window);
 		window.display();
+		step++;
 	}
 	std::cout << "calculated "+std::to_string(steps)+" steps";
 	getchar();

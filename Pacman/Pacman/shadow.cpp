@@ -4,8 +4,12 @@
 
 Shadow::Shadow()
 {
-	home.x = 29;
-	home.y = 1;
+	home.x = 28;
+	home.y = 0;
+	representation[0] = 'k';
+	representation[1] = 'l';
+	representation[2] = 'K';
+	representation[3] = 'L';
 }
 
 

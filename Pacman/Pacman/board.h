@@ -23,12 +23,13 @@ private:
 	void Setup();
 	bool LoadSprites();
 public:
-	static const int BOARD_WIDTH = 29;
-	static const int BOARD_HEIGHT = 32;
+	static const int BOARD_WIDTH = 28;
+	static const int BOARD_HEIGHT = 31;
 	char board[BOARD_WIDTH][BOARD_HEIGHT];
 	char State;
 private:
 	sf::Sprite sprites[33];
+	sf::Texture texts[33];
 	Pacman pac;
 	Shadow shadow;
 	Speedy speedy;

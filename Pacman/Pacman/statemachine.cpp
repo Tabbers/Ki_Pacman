@@ -14,14 +14,18 @@ Vector2 StateMachine::calculateNextPosition()
 	Vector2 temp;
 	temp = position;
 	prevposition = position;
-	if(heading.x > heading.y)
+	// Calc next position;
+	if(heading.x*heading.x > heading.y*heading.y)
 	{
-		temp.x - 1;
+		if(temp.x>0) temp.x - 1;
+		else temp.x + 1;
 		position = temp;
 	}
 	else
 	{
-		temp.y - 1;
+
+		if (temp.y>0) temp.x - 1;
+		else temp.y + 1;
 		position = temp;
 	}
 	return position;
@@ -67,4 +71,21 @@ void StateMachine::determinePosition(Board*board ,char c1, char c2, char c3, cha
 			}
 		}
 	}
+}
+
+char StateMachine::orientedCharacter()
+{
+	char result =' ';
+	if (heading.x*heading.x > heading.y*heading.y)
+	{
+		if (heading.x > 0) result = representation[0];
+		else result = representation[1];
+	}
+	else
+	{
+		if (heading.y>0) result = representation[2];
+		else result = representation[3];
+	}
+
+	return result;
 }

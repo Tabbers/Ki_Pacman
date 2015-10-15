@@ -4,15 +4,13 @@
 
 Bashful::Bashful()
 {
+	home.x = 28;
+	home.y = 31;
+	representation[0] = 'o';
+	representation[1] = 'p';
+	representation[2] = 'O';
+	representation[3] = 'P';
 }
-
-Bashful::Bashful(Shadow* shadow)
-{
-	home.x = 29;
-	home.y = 32;
-	shadow = shadow;
-}
-
 
 Bashful::~Bashful()
 {

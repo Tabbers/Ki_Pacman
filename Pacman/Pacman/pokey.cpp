@@ -5,7 +5,11 @@
 Pokey::Pokey()
 {
 	home.x = 0;
-	home.y = 32;
+	home.y = 31;
+	representation[0] = 'q';
+	representation[1] = 'r';
+	representation[2] = 'Q';
+	representation[3] = 'R';
 }
 
 

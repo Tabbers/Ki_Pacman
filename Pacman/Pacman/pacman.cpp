@@ -4,6 +4,10 @@
 
 Pacman::Pacman()
 {
+	representation[0] = 'i';
+	representation[1] = 'j';
+	representation[2] = 'I';
+	representation[3] = 'J';
 }
 
 
