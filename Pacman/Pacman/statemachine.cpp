@@ -9,25 +9,15 @@ void StateMachine::calculateNewDestination(Vector2,Vector2,char)
 {
 }
 
-Vector2 StateMachine::calculateNextPosition()
+Vector2 StateMachine::calculateNextPosition(Board *board)
 {
 	Vector2 temp;
 	temp = position;
 	prevposition = position;
-	// Calc next position;
-	if(heading.x*heading.x > heading.y*heading.y)
-	{
-		if(temp.x>0) temp.x - 1;
-		else temp.x + 1;
-		position = temp;
-	}
-	else
-	{
-
-		if (temp.y>0) temp.x - 1;
-		else temp.y + 1;
-		position = temp;
-	}
+	temp = position + dir;
+	if (Wallcheck(board, temp))
+		dir = dir.rotate(-90);
+	else position = position + dir;
 	return position;
 }
 
@@ -41,32 +31,32 @@ void StateMachine::determinePosition(Board*board ,char c1, char c2, char c3, cha
 			{
 				position.x = x;
 				position.y = y;
-				heading.x = 0;
-				heading.y = -1;
+				dir.x = 0;
+				dir.y = -1;
 				return;
 			}
 			if (board->board[x][y] == c2)
 			{
 				position.x = x;
 				position.y = y;
-				heading.x = 1;
-				heading.y = 0;
+				dir.x = 1;
+				dir.y = 0;
 				return;
 			}
 			if (board->board[x][y] == c3)
 			{
 				position.x = x;
 				position.y = y;
-				heading.x = 0;
-				heading.y = 1;
+				dir.x = 0;
+				dir.y = 1;
 				return;
 			}
 			if (board->board[x][y] == c4)
 			{
 				position.x = x;
 				position.y = y;
-				heading.x = -1;
-				heading.y = 0;
+				dir.x = -1;
+				dir.y = 0;
 				return;
 			}
 		}
@@ -86,6 +76,48 @@ char StateMachine::orientedCharacter()
 		if (heading.y>0) result = representation[2];
 		else result = representation[3];
 	}
+	return result;
+}
+
+void StateMachine::calculateDirection()
+{
+	Vector2 temp;
+	if (heading.x*heading.x > heading.y*heading.y)
+	{
+		if (heading.x > 0)
+		{
+			temp.x = -1;
+			temp.y = 0;
+		}
+		else
+		{
+			temp.x = 1;
+			temp.y = 0;
+		}
+		dir = temp;
+	}
+	else
+	{
+		if (heading.x > 0)
+		{
+			temp.y = -1;
+			temp.x = 0;
+		}
+		else
+		{
+			temp.y = 1;
+			temp.x = 0;
+		}
+		dir = temp;
+	}
+}
+
+bool StateMachine::Wallcheck(Board *board,Vector2 pos)
+{
+	bool result = false;
+
+	if (board->board[pos.x][pos.y] != ' ' && board->board[pos.x][pos.y] != '.' && board->board[pos.x][pos.y] != '*') result = true;
+	else result = false;
 
 	return result;
 }

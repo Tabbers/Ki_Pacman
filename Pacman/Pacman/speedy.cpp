@@ -17,13 +17,13 @@ Speedy::~Speedy()
 {
 }
 
-void Speedy::calculateNewDestination(Vector2 pacpos, Vector2 pacheading, char state)
+void Speedy::calculateNewDestination(Vector2 pacpos, Vector2 pacdir, char state)
 {
 	//p = patrol, r = pursuit, e = escape
 
 	if (state == 'r')
 	{
-		heading = (pacpos - position) + pacheading * 4;
+		heading = (pacpos - position) + pacdir * 4;
 	}
 	else if (state == 'p')
 	{

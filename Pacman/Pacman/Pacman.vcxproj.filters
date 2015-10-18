@@ -51,6 +51,9 @@
     <ClInclude Include="vector2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="display.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="board.cpp">
@@ -79,6 +82,9 @@
     </ClCompile>
     <ClCompile Include="statemachine.cpp">
       <Filter>Source Files\Statemachine</Filter>
+    </ClCompile>
+    <ClCompile Include="display.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,3 +1,4 @@
+GlobalState=pursuit
 5111111111111ab1111111111116
 4............DB..........L.2
 4.EAAF.EAAAF.DB.EAAAF.EAAF.2

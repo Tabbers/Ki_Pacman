@@ -22,7 +22,7 @@ void Bashful::calculateNewDestination(Vector2 pacpos, Vector2 pacheading, char s
 
 	if (state == 'r')
 	{
-		heading = ((pacpos - shadow->GetPosition())+pacheading*2)*2;
+		heading = ((pacpos - shadow->getPosition())+pacheading*2)*2;
 	}
 	else if (state == 'p')
 	{

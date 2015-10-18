@@ -184,6 +184,7 @@
   <ItemGroup>
     <ClInclude Include="bashful.h" />
     <ClInclude Include="board.h" />
+    <ClInclude Include="display.h" />
     <ClInclude Include="pacman.h" />
     <ClInclude Include="pokey.h" />
     <ClInclude Include="shadow.h" />
@@ -194,6 +195,7 @@
   <ItemGroup>
     <ClCompile Include="bashful.cpp" />
     <ClCompile Include="board.cpp" />
+    <ClCompile Include="display.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pacman.cpp" />
     <ClCompile Include="pokey.cpp" />

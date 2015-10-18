@@ -33,4 +33,5 @@ void Shadow::calculateNewDestination(Vector2 pacpos, Vector2 pacheading, char st
 	{
 		heading = heading.invert();
 	}
+	calculateDirection();
 }
